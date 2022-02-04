@@ -4,6 +4,9 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 4000;
+
+
 const pathFile = path.join(__dirname, '../public');
 
 const viewPath = path.join(__dirname, './templates/views');
@@ -107,6 +110,6 @@ app.use('/', (req, res, next) => {
     })
 })
 
-app.listen(4000, () => {
-    console.log('app running');
+app.listen(port, () => {
+    console.log(`server running on port ${port}`);
 })
