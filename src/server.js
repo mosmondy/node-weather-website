@@ -26,7 +26,7 @@ app.use(express.static(pathFile));
 
 app.get('/', (req, res) => {
     res.render('index', {
-        name: 'andrew mead',
+        name: 'musa',
         title: 'weather app'
     })
 })
