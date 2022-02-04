@@ -14,7 +14,8 @@ const weatherShow = (lat, long, codeCall) => {
             codeCall('check ur API link');
         } else {
             const data = res.body.current
-            codeCall(undefined, data?.weather_descriptions[0] + '. It is currently ' + data?.temperature + ' degrees out.It feels like ' + data?.feelslike + ' degrees out.');
+            console.log(data);
+            codeCall(undefined, data?.weather_descriptions[0] + '. It is currently ' + data?.temperature + ' degrees out.It feels like ' + data?.feelslike + ' degrees out. '+'Humidity is at '+ data?.humidity+'%. Chance of rain is '+data.precip+'.');
         }
     });
 }
